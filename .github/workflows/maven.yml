@@ -35,7 +35,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Build and push
-      run: mvn clean install jib:build -Djib.from-platforms="linux/amd64,linux/arm64" -Djib.to.image=hendisantika/customer -Djib.to.tags=${{ github.run_number }},latest -Djib.to.auth.username=${{ secrets.DOCKERHUB_USERNAME }} -Djib.to.auth.password=${{ secrets.DOCKERHUB_TOKEN }}
+      run: mvn clean install jib:build -Djib.from-platforms="linux/amd64,linux/arm64" -Djib.to.image=masnurrm/customer -Djib.to.tags=${{ github.run_number }},latest -Djib.to.auth.username=${{ secrets.DOCKERHUB_USERNAME }} -Djib.to.auth.password=${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build and push to Cloud Raya
       run: |
@@ -171,7 +171,7 @@ jobs:
     name: Deploy to Kubernetes
     runs-on: ubuntu-latest
     environment: production
-    steps:
+regi    steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
