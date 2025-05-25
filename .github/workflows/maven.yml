@@ -171,7 +171,7 @@ jobs:
     name: Deploy to Kubernetes
     runs-on: ubuntu-latest
     environment: production
-regi    steps:
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
